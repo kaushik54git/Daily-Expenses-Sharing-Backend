@@ -1,27 +1,126 @@
-# 💫 About Me:
-✌️   Enjoy to do programming and learn new tech<br><br>❤️   Love to writing code and experiment with new features<br><br>📧   Reach me anytime: kaushikkumbhat22@gmail.com<br><br>💬   Ask me about anything  [here](https://github.com/kaushik54git/kaushik54git/issues)<br><br>
+# Daily Expenses Sharing Application
 
+## Objective
+This project is a backend service for a daily expenses sharing application. It allows users to add expenses and split them using three different methods: exact amounts, percentages, and equal splits. The application manages user details, validates inputs, and generates downloadable balance sheets.
 
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/kaushik-kumbhat-747a08292/) 
+## Technology Stack
+- **Backend Framework**: Flask
+- **Database**: MongoDB
+- **Authentication**: Flask-JWT-Extended
+- **Validation**: Marshmallow
+- **File Generation**: ReportLab
 
-# 💻 Tech Stack:
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=flat&logo=latex&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=flat&logo=microsoftazure&logoColor=white) ![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=flat&logo=pythonanywhere&logoColor=151515) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazon-aws&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=flat&logo=firebase) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=flat&logo=flask&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=flat&logo=mysql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=flat&logo=sqlite&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=flat&logo=firebase&logoColor=ffcd34) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=flat&logo=Canva&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=flat&logo=Keras&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=flat&logo=githubactions&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=kaushik54git&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=kaushik54git&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=kaushik54git&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=kaushik54git&theme=monokai&no-frame=false&no-bg=false&margin-w=4)
+## Features
+- User Management:
+  - Create user
+  - Retrieve user details
+- Expense Management:
+  - Add expense
+  - Retrieve individual user expenses
+  - Retrieve overall expenses
+  - Download balance sheet
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+## Setup Instructions
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=kaushik54git&limit=5&theme=dark&combine_all_yearly_contributions=true)
+### Prerequisites
+- Python 3.7 or higher
+- MongoDB
 
-### 😂 Random Dev Meme
-<img src='https://memer-new.vercel.app/' style="height: 400px;"/>
+### Installation
 
----
-[![](https://visitcount.itsvg.in/api?id=kaushik54git&icon=0&color=0)](https://visitcount.itsvg.in)
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/kaushik54git/Daily-Expenses-Sharing-Backend.git
+    cd Daily Expenses Sharing Backend
+    ```
+
+2. **Create and activate a virtual environment**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Set up MongoDB**
+    - Ensure MongoDB is installed and running on your local machine.
+    - Create a database named `daily_expenses`.
+
+5. **Configure the application**
+    - Edit the `config.py` file if necessary to match your MongoDB URI and other settings.
+
+### Running the Application
+
+1. **Start the Flask application**
+    ```bash
+    python run.py
+    ```
+
+2. **Access the application**
+    - The application will be running at `http://127.0.0.1:5000`.
+
+## API Endpoints
+
+### User Endpoints
+- **Create User**
+  - **URL**: `/users`
+  - **Method**: `POST`
+  - **Payload**: `{"email": "kaushikkumbhat54@gmail.com", "name": "Kaushik Kumbhat", "mobile": "1234567890"}`
+  - **Response**: `{"message": "User created successfully"}`
+
+- **Retrieve User Details**
+  - **URL**: `/users/<email>`
+  - **Method**: `GET`
+  - **Headers**: `Authorization: Bearer <JWT Token>`
+  - **Response**: `{"email": "kaushikkumbhat54@gmail.com", "name": "Kaushik Kumbhat", "mobile": "1234567890"}`
+
+### Expense Endpoints
+- **Add Expense**
+  - **URL**: `/expenses`
+  - **Method**: `POST`
+  - **Headers**: `Authorization: Bearer <JWT Token>`
+  - **Payload**: 
+    ```json
+    {
+      "description": "Dinner",
+      "amount": 3000,
+      "method": "equal",
+      "splits": [
+        {"email": "user1@example.com"},
+        {"email": "user2@example.com"},
+        {"email": "user3@example.com"}
+      ]
+    }
+    ```
+  - **Response**: `{"message": "Expense added successfully"}`
+
+- **Retrieve Individual User Expenses**
+  - **URL**: `/expenses/user/<email>`
+  - **Method**: `GET`
+  - **Headers**: `Authorization: Bearer <JWT Token>`
+  - **Response**: List of expenses for the specified user.
+
+- **Retrieve Overall Expenses**
+  - **URL**: `/expenses`
+  - **Method**: `GET`
+  - **Headers**: `Authorization: Bearer <JWT Token>`
+  - **Response**: List of all expenses.
+
+- **Download Balance Sheet**
+  - **URL**: `/balance-sheet`
+  - **Method**: `GET`
+  - **Headers**: `Authorization: Bearer <JWT Token>`
+  - **Response**: PDF file of the balance sheet.
+
+## Validation
+- User input is validated using Marshmallow.
+- The percentage split method ensures that the percentages add up to 100%.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
